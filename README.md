@@ -1,41 +1,53 @@
-A comprehensive solution for managing movies, series, and user interactions. This project is designed with clean architecture principles, covering multiple layers, including API, services, repositories, and data access. It supports CRUD operations, advanced search, and user-specific features like favorites and watchlists.
+# MovieSeries Application
 
-Key Features:
-Modular Design: Cleanly separated layers for better maintainability.
-RESTful API: Exposes endpoints for managing movies, series, reviews, tags, and ratings.
-Advanced Search: Supports filtered and paginated search with flexible criteria.
-User Interactions: Allows users to manage their favorites and watchlists.
-Code Coverage: Comprehensive unit tests to ensure high reliability.
-Entity Framework Core: For database operations with migration support.
-Modern Technology Stack: Built with ASP.NET Core, xUnit, and other modern frameworks.
-Getting Started:
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/<your-repo>/MovieSeriesSolution.git
-Restore packages:
-bash
-Copy code
-dotnet restore
-Run migrations:
-bash
-Copy code
-dotnet ef database update
-Start the application:
-bash
-Copy code
-dotnet run --project MovieSeries.API
-Run tests:
-bash
-Copy code
-dotnet test
-Future Improvements:
-Enhanced user authentication and authorization.
-Integration with external movie databases (e.g., IMDb, TMDB).
-Improved UI with Angular or React for the front-end layer.
-Contributing:
-Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request.
+This project is a comprehensive solution for managing movies and series, allowing CRUD operations, tagging, reviewing, and rating. It is built using a layered architecture with .NET Core technologies.
 
-License:
-This project is licensed under the MIT License.
+## Features
 
+- **User Management**: Create, update, and manage users.
+- **Movie Management**: Add, update, and retrieve movies.
+- **Tagging System**: Assign and manage tags for movies.
+- **Reviews**: Add, approve, and retrieve reviews for movies.
+- **Ratings**: Add and retrieve ratings for movies.
+
+## Project Architecture
+
+The project uses a modular, layered structure:
+
+1. **API Layer**: Handles HTTP requests and responses.
+2. **Service Layer**: Contains business logic.
+3. **Repository Layer**: Communicates with the database.
+4. **Data Access Layer**: Handles database context and migrations.
+5. **Core Layer**: Contains shared entities and interfaces.
+
+## Technologies Used
+
+- **.NET Core**: Backend framework.
+- **Entity Framework Core**: ORM for database operations.
+- **xUnit**: Unit testing framework.
+- **MSTest**: For additional testing support.
+- **Moq**: Mocking library for unit tests.
+- **ReportGenerator**: For generating test coverage reports.
+
+## Installation
+
+### Prerequisites
+
+- Install [.NET SDK](https://dotnet.microsoft.com/download).
+- Install a SQL Server instance for the database.
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/movieseries-app.git
+   cd movieseries-app
+2. Build the project:
+    ```bash
+    dotnet build
+3. Apply migrations:
+   ```bash
+   dotnet ef database update --project MovieSeries.DataAccessLayer
+4.Run the application:
+   ```bash
+   dotnet run --project MovieSeries.API
